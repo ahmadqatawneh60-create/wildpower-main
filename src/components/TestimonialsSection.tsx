@@ -115,16 +115,6 @@ const TestimonialsSection = () => {
                 <motion.p key={active} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="text-xl md:text-2xl leading-relaxed text-foreground/90 mb-8 font-medium">
                   "{testimonials[active].content}"
                 </motion.p>
-                <div className="flex items-center justify-between">
-                  <div className="hidden">
-                    {/* Names and roles hidden per client request */}
-                  </div>
-                  <div className="w-full flex items-center justify-between">
-                    <div className="hidden sm:flex items-center gap-2">
-                      <span className="text-xs text-muted-foreground px-3 py-1 rounded-full glass">{testimonials[active].project}</span>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
 
