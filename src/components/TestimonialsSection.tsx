@@ -11,46 +11,28 @@ const TestimonialsSection = () => {
 
   const testimonials = [
     {
-      name: t("أحمد الشمري", "Ahmed Al-Shamri"),
-      role: t("مدير شركة الأفق للتطوير", "Director, Al-Ofuq Development Co."),
       content: t("تعاملنا معهم في تركيب نظام كاميرات مراقبة متكامل لمبنانا. الجودة حلوة جداً والفريق احترافي ومنظم جداً. أنصح الكل يتعاملوا معهم من غير تردد.", "We worked with Wild Power to install a complete CCTV system for our building. Excellent quality and a very professional team. Highly recommended."),
       rating: 5,
-      project: t("نظام مراقبة متكامل", "Complete CCTV System"),
     },
     {
-      name: t("فهد العتيبي", "Fahad Al-Otaibi"),
-      role: t("مالك مجمع تجاري", "Mall Owner"),
       content: t("أفضل شركة تعاملت معها في مجال الأمن. ركبوا لنا نظام أكسس كنترول ذكي مع كاميرات Hikvision والنتايج تبهر العين.", "The best security company I've dealt with. They installed a smart access control system with Hikvision cameras — amazing results."),
       rating: 5,
-      project: t("أكسس كنترول + كاميرات", "Access Control + CCTV"),
     },
     {
-      name: t("نورة القحطاني", "Noura Al-Qahtani"),
-      role: t("مديرة مستشفى الرعاية", "Hospital Manager"),
       content: t("ركبوا لنا نظام كول سنتر مقدم وربطوا بيه كل الأقسام. الدعم الفني حلو جداً وموجود يل على ساعة.", "They installed an advanced call center system connecting all hospital departments. Excellent 24/7 technical support."),
       rating: 5,
-      project: t("كول سنتر طبي", "Medical Call Center"),
     },
     {
-      name: t("خالد المطيري", "Khaled Al-Mutairi"),
-      role: t("مدير مصنع البدائع", "Factory Manager"),
       content: t("ركبوا لنا أكثر من 200 كاميرا في المصنع مع نظام NVR قوي. الشغل تسلموه قبل التاريخ والجودة كانت ممتازة جداً.", "Over 200 cameras installed in the factory with an advanced NVR system. The project was delivered ahead of schedule with top quality."),
       rating: 5,
-      project: t("+200 كاميرا مراقبة", "+200 CCTV Cameras"),
     },
     {
-      name: t("سارة الحربي", "Sara Al-Harbi"),
-      role: t("صاحبة سلسلة مطاعم", "Restaurant Chain Owner"),
       content: t("ركبوا لنا كاميرات مراقبة في كل الفروع وتقدر تشوفها من الموبايل. الخدمة تمام والأسعار معقولة وكويسة.", "They installed CCTV in all branches with mobile monitoring. Excellent service and competitive prices."),
       rating: 5,
-      project: t("مراقبة فروع متعددة", "Multi-Branch Monitoring"),
     },
     {
-      name: t("عبدالله الدوسري", "Abdullah Al-Dosari"),
-      role: t("مدير أمن مجمع حكومي", "Government Security Manager"),
       content: t("نظام أمني شامل فيه كاميرات وبوابات دخول وأنظمة إنذار. فريق Wild Power اثبتوا إنهم أكفاء وشاطرين في المشاريع الكبيرة.", "A comprehensive security system with cameras, gates, and alarms. Wild Power proved their excellence in large-scale projects."),
       rating: 5,
-      project: t("نظام أمني حكومي", "Government Security"),
     },
   ];
 
