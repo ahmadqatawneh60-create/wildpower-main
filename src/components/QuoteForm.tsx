@@ -25,7 +25,18 @@ const QuoteForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    const subject = encodeURIComponent("طلب عرض سعر | Price Quote Request");
+    const body = encodeURIComponent(
+      `الاسم: ${formData.name}\n` +
+      `رقم الهاتف: ${formData.phone}\n` +
+      `نوع الخدمة: ${formData.service}\n` +
+      `تفاصيل إضافية: ${formData.details}`
+    );
+
+    window.location.href = `mailto:sadamjafreh85@gmail.com?subject=${subject}&body=${body}`;
     setSubmitted(true);
+
     setTimeout(() => {
       setSubmitted(false);
       setFormData({ name: "", phone: "", service: "", details: "" });

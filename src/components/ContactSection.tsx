@@ -11,7 +11,7 @@ const ContactSection = () => {
 
   const contacts = [
     { icon: Phone, title: t("اتصل بنا", "Call Us"), value: "0797104488", dir: "ltr" as const, href: "tel:+962797104488" },
-    { icon: Mail, title: t("البريد الإلكتروني", "Email"), value: "info@wildpower.com", href: "mailto:info@wildpower.com" },
+    { icon: Mail, title: t("البريد الإلكتروني", "Email"), value: "sadamjafreh85@gmail.com", href: "mailto:sadamjafreh85@gmail.com" },
     { icon: MapPin, title: t("موقعنا", "Location"), value: t("المملكة الأردنية الهاشمية", "Hashemite Kingdom of Jordan") },
     { icon: Clock, title: t("ساعات العمل", "Working Hours"), value: t("السبت - الخميس: 9 ص - 6 م", "Sat - Thu: 9 AM - 6 PM") },
   ];

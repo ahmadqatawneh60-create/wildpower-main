@@ -41,9 +41,9 @@ const Footer = () => {
                 <Phone className="w-4 h-4 text-primary/70" />
                 <span dir="ltr">0797104488</span>
               </a>
-              <a href="mailto:info@wildpower.com" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+              <a href="mailto:sadamjafreh85@gmail.com" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
                 <Mail className="w-4 h-4 text-primary/70" />
-                info@wildpower.com
+                sadamjafreh85@gmail.com
               </a>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <MapPin className="w-4 h-4 text-primary/70" />
