@@ -10,6 +10,7 @@ const QuoteForm = () => {
   const { t } = useLanguage();
   const [formData, setFormData] = useState({ name: "", phone: "", service: "", details: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const services = [
     t("تركيب كاميرات المراقبة", "CCTV Installation"),
@@ -23,24 +24,39 @@ const QuoteForm = () => {
     t("سمارت هوم", "Smart Home"),
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
 
-    const subject = encodeURIComponent("طلب عرض سعر | Price Quote Request");
-    const body = encodeURIComponent(
-      `الاسم: ${formData.name}\n` +
-      `رقم الهاتف: ${formData.phone}\n` +
-      `نوع الخدمة: ${formData.service}\n` +
-      `تفاصيل إضافية: ${formData.details}`
-    );
+    try {
+      const formElement = e.target as HTMLFormElement;
+      const data = new FormData();
+      data.append("name", formData.name);
+      data.append("phone", formData.phone);
+      data.append("service", formData.service);
+      data.append("details", formData.details);
 
-    window.location.href = `mailto:sadamjafreh85@gmail.com?subject=${subject}&body=${body}`;
-    setSubmitted(true);
+      // Send to Formspree endpoint
+      const response = await fetch("https://formspree.io/f/meoqvyqj", {
+        method: "POST",
+        body: data,
+      });
 
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: "", phone: "", service: "", details: "" });
-    }, 4000);
+      if (response.ok) {
+        setSubmitted(true);
+        setTimeout(() => {
+          setSubmitted(false);
+          setFormData({ name: "", phone: "", service: "", details: "" });
+          setLoading(false);
+        }, 4000);
+      } else {
+        throw new Error("Failed to send");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert(t("حدث خطأ في الإرسال. حاول مرة أخرى.", "Error sending. Please try again."));
+      setLoading(false);
+    }
   };
 
   const inputClass = "w-full rounded-xl border border-border/50 bg-secondary/50 px-5 py-4 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/30 transition-all duration-300 text-sm";
