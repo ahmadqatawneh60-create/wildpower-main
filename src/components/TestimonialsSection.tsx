@@ -115,33 +115,6 @@ const TestimonialsSection = () => {
             </div>
           </div>
         </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {testimonials.filter((_, i) => i !== active).slice(0, 3).map((item, i) => (
-            <motion.div
-              key={item.name}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.4 + i * 0.1 }}
-              onClick={() => setActive(testimonials.indexOf(item))}
-              className="glass-card rounded-2xl p-6 cursor-pointer hover:border-primary/20 transition-all duration-300 group"
-            >
-              <div className="flex items-center gap-1 mb-3">
-                {[...Array(item.rating)].map((_, j) => (
-                  <Star key={j} className="w-3.5 h-3.5 fill-primary/60 text-primary/60" />
-                ))}
-              </div>
-              <p className="text-sm text-muted-foreground line-clamp-3 mb-4 group-hover:text-foreground/80 transition-colors">"{item.content}"</p>
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary text-sm font-bold">{item.name.charAt(0)}</div>
-                <div>
-                  <p className="text-sm font-semibold">{item.name}</p>
-                  <p className="text-xs text-muted-foreground">{item.role}</p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
       </div>
     </section>
   );
