@@ -26,13 +26,13 @@ const PortfolioSection = () => {
   ];
 
   const videos = [
-    { src: "/videos/company-work-2026-main.mp4", title: t("أعمالنا المنجزة 2026", "Our Work 2026"), category: t("فيديو رئيسي", "Featured Video"), year: "2026" },
-    { src: "/videos/company-work-2026.mp4", title: t("أعمال الشركة 2026", "Company Work 2026"), category: t("فيديو", "Video"), year: "2026" },
-    { src: "/videos/company-work-2026-1.mp4", title: t("تركيب كاميرات مراقبة", "CCTV Installation"), category: t("فيديو", "Video"), year: "2026" },
-    { src: "/videos/company-work-2026-2.mp4", title: t("تمديد شبكات وأنظمة أمنية", "Network & Security Systems"), category: t("فيديو", "Video"), year: "2026" },
-    { src: "/videos/company-work-2026-3.mp4", title: t("تركيب أنظمة تحكم بالدخول", "Access Control Setup"), category: t("فيديو", "Video"), year: "2026" },
-    { src: "/videos/company-work-2026-4.mp4", title: t("صيانة وتشغيل أنظمة", "System Maintenance"), category: t("فيديو", "Video"), year: "2026" },
-    { src: "/videos/company-work-2026-5.mp4", title: t("مشاريع متكاملة", "Integrated Projects"), category: t("فيديو", "Video"), year: "2026" },
+    { src: "./videos/company-work-2026-main.mp4", title: t("أعمالنا المنجزة 2026", "Our Work 2026"), category: t("فيديو رئيسي", "Featured Video"), year: "2026" },
+    { src: "./videos/company-work-2026.mp4", title: t("أعمال الشركة 2026", "Company Work 2026"), category: t("فيديو", "Video"), year: "2026" },
+    { src: "./videos/company-work-2026-1.mp4", title: t("تركيب كاميرات مراقبة", "CCTV Installation"), category: t("فيديو", "Video"), year: "2026" },
+    { src: "./videos/company-work-2026-2.mp4", title: t("تمديد شبكات وأنظمة أمنية", "Network & Security Systems"), category: t("فيديو", "Video"), year: "2026" },
+    { src: "./videos/company-work-2026-3.mp4", title: t("تركيب أنظمة تحكم بالدخول", "Access Control Setup"), category: t("فيديو", "Video"), year: "2026" },
+    { src: "./videos/company-work-2026-4.mp4", title: t("صيانة وتشغيل أنظمة", "System Maintenance"), category: t("فيديو", "Video"), year: "2026" },
+    { src: "./videos/company-work-2026-5.mp4", title: t("مشاريع متكاملة", "Integrated Projects"), category: t("فيديو", "Video"), year: "2026" },
   ];
 
   return (
